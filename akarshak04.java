@@ -1,11 +1,24 @@
-//WAP to encrypt a grade by adding 8 to it .Decrypt it to show the correct grade
+import java.util.Scanner;
+
 public class akarshak04 {
     public static void main(String[] args) {
-        char grade = 'B';
-        grade = (char) (grade + 8);
-        System.out.println(grade);
-        grade = (char) (grade - 8);
-        System.out.println(grade + "");
-        System.out.println("akarshak");
+        int m1, m2, m3;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ENTER PHYSICS MARKS");
+        m1 = sc.nextByte();
+        System.out.println("ENTER CHEMISTRY MARKS");
+        m2 = sc.nextByte();
+        System.out.println("ENTER MATHES MARKS");
+        m3 = sc.nextByte();
+        float avg = (m1 + m2 + m3) / 3.0f;
+        System.out.println("STUDENT OVER ALL PERCENT IS:" + avg);
+        
+        if (avg >= 40 && m1 > 33 && m2 >= 33 && m3 >= 33) {
+            System.out.println("congrates you are promoted");
+        } else {
+            System.out.println("you are detained");
+        }
+
     }
+
 }
